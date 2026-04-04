@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Tech Summit 2024 | Responsive Official</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-visuals">
+        <div class="bg-glow bg-glow--1"></div>
+        <div class="bg-glow bg-glow--2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container navbar__inner">
+            <div class="logo">FUTURE<span>TECH</span></div>
+            
+            <input type="checkbox" id="nav-check">
+            <label for="nav-check" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li class="nav-btn-wrapper"><a href="#tickets" class="nav-btn">Entry</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero__badge">NOV 12-13, 2024 | TOKYO</div>
+            <h1 class="hero__title">BEYOND THE<br>INTELLIGENCE</h1>
+            <p class="hero__lead">AIと人間が共創する、次世代の技術カンファレンス。<br>最新の知見とネットワーキングを、その手に。</p>
+            <div class="hero__actions">
+                <a href="#tickets" class="btn btn--primary">チケットを購入</a>
+                <a href="#" class="btn btn--outline">PVを視聴する</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="stats section">
+            <div class="stats__grid">
+                <div class="stats__item"><b>50+</b><span>Speakers</span></div>
+                <div class="stats__item"><b>20+</b><span>Sessions</span></div>
+                <div class="stats__item"><b>2000+</b><span>Attendees</span></div>
+            </div>
+        </section>
+
+        <section id="speakers" class="section">
+            <h2 class="section-title">Keynote Speakers</h2>
+            <div class="speaker-grid">
+                <article class="speaker-card">
+                    <div class="speaker-card__img"></div>
+                    <div class="speaker-card__body">
+                        <span class="speaker-card__role">AI Strategy</span>
+                        <h3>田中 健太</h3>
+                        <p>Future Tech Labs CEO</p>
+                    </div>
+                </article>
+                <article class="speaker-card">
+                    <div class="speaker-card__img"></div>
+                    <div class="speaker-card__body">
+                        <span class="speaker-card__role">Creative Director</span>
+                        <h3>Sarah Jenkins</h3>
+                        <p>PixelMind Studio</p>
+                    </div>
+                </article>
+                <article class="speaker-card">
+                    <div class="speaker-card__img"></div>
+                    <div class="speaker-card__body">
+                        <span class="speaker-card__role">Fullstack Engineer</span>
+                        <h3>佐藤 亜美</h3>
+                        <p>NeoNet Systems</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="schedule" class="section">
+            <h2 class="section-title">Schedule</h2>
+            <div class="timeline">
+                <div class="timeline__item">
+                    <div class="time">10:00</div>
+                    <div class="timeline__content">
+                        <h3>Opening Keynote</h3>
+                        <p>AIの進化と私たちの未来について</p>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="time">13:30</div>
+                    <div class="timeline__content">
+                        <h3>Special Session</h3>
+                        <p>クラウドネイティブなインフラ設計の最前線</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tickets" class="section">
+            <h2 class="section-title">Tickets</h2>
+            <div class="price-grid">
+                <div class="price-card">
+                    <h3>Online Pass</h3>
+                    <div class="price-val">¥3,000</div>
+                    <ul class="price-list">
+                        <li>全セッションのLIVE視聴</li>
+                        <li>アーカイブ視聴権</li>
+                    </ul>
+                    <a href="#" class="btn btn--outline" style="width:100%">購入する</a>
+                </div>
+                <div class="price-card price-card--featured">
+                    <div class="featured-label">RECOMMEND</div>
+                    <h3>Full Access</h3>
+                    <div class="price-val">¥15,000</div>
+                    <ul class="price-list">
+                        <li>会場参加 + オンライン</li>
+                        <li>アフターパーティ参加権</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary" style="width:100%">購入する</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <h2 class="section-title">FAQ</h2>
+            <details class="faq__item">
+                <summary class="faq__question">オンライン視聴は可能ですか？</summary>
+                <div class="faq__answer">はい、全セッションのアーカイブ視聴が可能です。</div>
+            </details>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Future Tech Summit. Built for Portfolio.</p>
+    </footer>
+
+</body>
+</html>
