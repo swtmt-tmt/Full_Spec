@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Tech Summit 2024 | Responsive Official</title>
+    <title>Future Tech Summit 2024 | Full Spec</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +24,7 @@
             
             <input type="checkbox" id="nav-check">
             <label for="nav-check" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </label>
             
             <ul class="nav-links">
@@ -44,7 +42,7 @@
         <div class="container">
             <div class="hero__badge">NOV 12-13, 2024 | TOKYO</div>
             <h1 class="hero__title">BEYOND THE<br>INTELLIGENCE</h1>
-            <p class="hero__lead">AIと人間が共創する、次世代の技術カンファレンス。<br>最新の知見とネットワーキングを、その手に。</p>
+            <p class="hero__lead">AIと人間が共創する、次世代の技術カンファレンス。最新のフレームワークからビジネス活用まで、すべてがここに。</p>
             <div class="hero__actions">
                 <a href="#tickets" class="btn btn--primary">チケットを購入</a>
                 <a href="#" class="btn btn--outline">PVを視聴する</a>
@@ -53,65 +51,115 @@
     </header>
 
     <main class="container">
-        <section class="stats section">
-            <div class="stats__grid">
-                <div class="stats__item"><b>50+</b><span>Speakers</span></div>
-                <div class="stats__item"><b>20+</b><span>Sessions</span></div>
-                <div class="stats__item"><b>2000+</b><span>Attendees</span></div>
+
+        <section id="about" class="about section">
+            <h2 class="section-title">The Experience <span>ここでの体験</span></h2>
+            <div class="about__grid">
+                <div class="about__card">
+                    <span class="about__icon">🚀</span>
+                    <h3>最先端の知見</h3>
+                    <p>OpenAI、Googleなどトップ企業のエンジニアによる技術解説セッション。</p>
+                </div>
+                <div class="about__card">
+                    <span class="about__icon">🌐</span>
+                    <h3>ネットワーク</h3>
+                    <p>国内外のエンジニア、デザイナー、経営層とのコネクション形成。</p>
+                </div>
+                <div class="about__card">
+                    <span class="about__icon">🛠️</span>
+                    <h3>ハンズオン</h3>
+                    <p>最新のAPIやフレームワークをその場で体験できるワークショップ。</p>
+                </div>
             </div>
         </section>
 
-        <section id="speakers" class="section">
+        <section id="speakers" class="speakers section">
             <h2 class="section-title">Keynote Speakers</h2>
             <div class="speaker-grid">
-                <article class="speaker-card">
-                    <div class="speaker-card__img"></div>
-                    <div class="speaker-card__body">
-                        <span class="speaker-card__role">AI Strategy</span>
-                        <h3>田中 健太</h3>
-                        <p>Future Tech Labs CEO</p>
-                    </div>
-                </article>
-                <article class="speaker-card">
-                    <div class="speaker-card__img"></div>
-                    <div class="speaker-card__body">
-                        <span class="speaker-card__role">Creative Director</span>
-                        <h3>Sarah Jenkins</h3>
-                        <p>PixelMind Studio</p>
-                    </div>
-                </article>
-                <article class="speaker-card">
-                    <div class="speaker-card__img"></div>
-                    <div class="speaker-card__body">
-                        <span class="speaker-card__role">Fullstack Engineer</span>
-                        <h3>佐藤 亜美</h3>
-                        <p>NeoNet Systems</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="schedule" class="section">
-            <h2 class="section-title">Schedule</h2>
-            <div class="timeline">
-                <div class="timeline__item">
-                    <div class="time">10:00</div>
-                    <div class="timeline__content">
-                        <h3>Opening Keynote</h3>
-                        <p>AIの進化と私たちの未来について</p>
-                    </div>
+                <div class="speaker-card">
+                    <div class="speaker-img"></div>
+                    <h3>田中 健太</h3>
+                    <p style="color: var(--accent-cyan);">AI Research Expert</p>
                 </div>
-                <div class="timeline__item">
-                    <div class="time">13:30</div>
-                    <div class="timeline__content">
-                        <h3>Special Session</h3>
-                        <p>クラウドネイティブなインフラ設計の最前線</p>
-                    </div>
+                <div class="speaker-card">
+                    <div class="speaker-img"></div>
+                    <h3>Sarah Jenkins</h3>
+                    <p style="color: var(--accent-cyan);">Creative Director</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-img"></div>
+                    <h3>佐藤 亜美</h3>
+                    <p style="color: var(--accent-cyan);">Fullstack Engineer</p>
                 </div>
             </div>
         </section>
 
-        <section id="tickets" class="section">
+<section id="schedule" class="schedule section">
+    <h2 class="section-title">Schedule<span>タイムテーブル</span></h2>
+    <div class="timeline">
+        <div class="timeline__item">
+            <div class="time">10:00</div>
+            <div class="timeline__content">
+                <span class="timeline__tag timeline__tag--main">Keynote</span>
+                <h3>Beyond the Intelligence</h3>
+                <p>AIの進化と私たちが創る未来のビジョンについて。 (田中 健太)</p>
+            </div>
+        </div>
+
+        <div class="timeline__item">
+            <div class="time">11:30</div>
+            <div class="timeline__content">
+                <span class="timeline__tag">Frontend</span>
+                <h3>Next-Gen Frameworks</h3>
+                <p>2024年後半に注目すべきReact/Next.jsの新機能と実装パターン。 (佐藤 亜美)</p>
+            </div>
+        </div>
+
+        <div class="timeline__item timeline__item--break">
+            <div class="time">12:30</div>
+            <div class="timeline__content">
+                <p>🍱 Lunch Break & Networking</p>
+            </div>
+        </div>
+
+        <div class="timeline__item">
+            <div class="time">14:00</div>
+            <div class="timeline__content">
+                <span class="timeline__tag">Infrastructure</span>
+                <h3>Cloud Native Frontier</h3>
+                <p>スケーラブルなインフラ設計とコスト最適化のベストプラクティス。 (Sarah Jenkins)</p>
+            </div>
+        </div>
+
+        <div class="timeline__item">
+            <div class="time">15:30</div>
+            <div class="timeline__content">
+                <span class="timeline__tag">Lightning Talk</span>
+                <h3>Community LT Session</h3>
+                <p>公募から選ばれた5名のエンジニアによる、5分間の濃縮技術プレゼン。</p>
+            </div>
+        </div>
+
+        <div class="timeline__item">
+            <div class="time">17:00</div>
+            <div class="timeline__content">
+                <span class="timeline__tag timeline__tag--main">Closing</span>
+                <h3>Ending Remark</h3>
+                <p>総括と、次なる技術トレンドへの展望。</p>
+            </div>
+        </div>
+
+        <div class="timeline__item timeline__item--party">
+            <div class="time">18:30</div>
+            <div class="timeline__content">
+                <h3>After Party 🍹</h3>
+                <p>会場参加者限定。登壇者やゲストとの立食懇親会（チケット A 保持者のみ）。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="tickets" class="tickets section">
             <h2 class="section-title">Tickets</h2>
             <div class="price-grid">
                 <div class="price-card">
@@ -119,7 +167,8 @@
                     <div class="price-val">¥3,000</div>
                     <ul class="price-list">
                         <li>全セッションのLIVE視聴</li>
-                        <li>アーカイブ視聴権</li>
+                        <li>アーカイブ視聴権 (1ヶ月)</li>
+                        <li>&nbsp;</li>
                     </ul>
                     <a href="#" class="btn btn--outline" style="width:100%">購入する</a>
                 </div>
@@ -128,25 +177,78 @@
                     <h3>Full Access</h3>
                     <div class="price-val">¥15,000</div>
                     <ul class="price-list">
-                        <li>会場参加 + オンライン</li>
+                        <li>会場参加 + アーカイブ視聴権</li>
                         <li>アフターパーティ参加権</li>
+                        <li>限定ノベルティセット</li>
                     </ul>
                     <a href="#" class="btn btn--primary" style="width:100%">購入する</a>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="section">
-            <h2 class="section-title">FAQ</h2>
-            <details class="faq__item">
-                <summary class="faq__question">オンライン視聴は可能ですか？</summary>
-                <div class="faq__answer">はい、全セッションのアーカイブ視聴が可能です。</div>
-            </details>
+        <section id="faq" class="faq section">
+            <h2 class="section-title">よくあるご質問</h2>
+            <div class="faq__container">
+                <details class="faq__item" open>
+                    <summary class="faq__question">オンライン視聴は可能ですか？</summary>
+                    <div class="faq__answer">はい、全セッションのリアルタイム配信と、1ヶ月間のアーカイブ視聴が可能です。</div>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">領収書は発行されますか？</summary>
+                    <div class="faq__answer">マイページよりPDF形式でダウンロードいただけます。</div>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">当日券の販売はありますか？</summary>
+                    <div class="faq__answer">会場の収容人数に達し次第終了となりますので、事前のオンライン購入をお勧めします。</div>
+                </details>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2024 Future Tech Summit. Built for Portfolio.</p>
+<footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <div class="logo">FUTURE<span>TECH</span></div>
+                <p>次世代の技術と知見が交差する、エンジニアのためのカンファレンス。</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="X (Twitter)">𝕏</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="YouTube">YouTube</a>
+                    <a href="#" aria-label="GitHub">GitHub</a>
+                </div>
+            </div>
+
+            <div class="footer__nav">
+                <div class="footer__nav-group">
+                    <h4>Event</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-group">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">会場アクセス</a></li>
+                        <li><a href="#">行動規範</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">特定商取引法に基づく表記</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024 Future Tech Summit. Built for your Portfolio.</p>
+        </div>
     </footer>
 
 </body>
