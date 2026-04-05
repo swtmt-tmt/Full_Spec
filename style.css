@@ -437,6 +437,30 @@ h1, h2, h3, .logo, .btn, .time, .price-val, .footer__nav-group h4 {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* メインの見出し（HEROエリア）を少し控えめに */
+    .hero__title {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    /* 各セクションのタイトル */
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    /* セクションタイトルの下のサブテキスト（英語部分） */
+    .section-title span {
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+    }
+
+    /* リード文（説明テキスト）のサイズ微調整 */
+    .hero__lead {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
     .footer__inner { grid-template-columns: 1fr; gap: 50px; }
     .footer__nav { grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
     .footer__brand { text-align: center; }
