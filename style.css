@@ -290,6 +290,37 @@ h1, h2, h3, .logo, .btn, .time, .price-val, .footer__nav-group h4 {
     margin-top: 10px;
 }
 
+/* --- Access Modal Custom Styles --- */
+
+.modal__content--map {
+    max-width: 800px;
+}
+
+.access-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.access-info p {
+    margin: 5px 0;
+    color: #fff;
+}
+
+.map-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid var(--glass-border);
+}
+
+.access-routes {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .footer__inner { grid-template-columns: 1fr; gap: 50px; }
