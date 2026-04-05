@@ -166,7 +166,8 @@ h1, h2, h3, .logo, .btn, .time, .price-val, .footer__nav-group h4 {
     object-fit: cover; /* 画像の比率を維持 */
 }
 .speaker-img img{
-    height: 250px !important
+    height: 230px !important;
+    margin-top:20px;
 } 
 
 /* Timeline */
