@@ -323,6 +323,30 @@ h1, h2, h3, .logo, .btn, .time, .price-val, .footer__nav-group h4 {
     font-size: 0.85rem;
 }
 
+/* --- Custom Scrollbar --- */
+/* スクロールバー全体の幅 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* スクロールバーの背景（レール部分） */
+::-webkit-scrollbar-track {
+    background: var(--clr-bg);
+}
+
+/* 動くバーの部分（つまみ） */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    border: 2px solid var(--clr-bg); /* レールとの間に隙間を作る */
+}
+
+/* ホバーした時に少し明るくする */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-accent);
+    box-shadow: 0 0 10px var(--clr-accent);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .footer__inner { grid-template-columns: 1fr; gap: 50px; }
