@@ -213,44 +213,92 @@ h1, h2, h3, .logo, .btn, .time, .price-val, .footer__nav-group h4 {
 
 .footer__bottom { text-align: center; padding: 40px 0; border-top: 1px solid var(--glass-border); font-size: 0.8rem; color: #4b5563; }
 
-/* --- Contact Modal --- */
-.modal {
-    display: none; /* 最初は隠す */
-    position: fixed;
-    z-index: 3000; /* ナビより上に表示 */
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(3, 7, 18, 0.9); /* 背景を暗く */
-    backdrop-filter: blur(10px);
-    align-items: center;
-    justify-content: center;
+/* --- Contact Modal (Unified Wide Style) --- */
+.modal__content--contact {
+    max-width: 800px;
+    padding: clamp(30px, 8vw, 60px);
 }
 
-.modal__content {
-    background: var(--glass);
+.contact-info {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contact-info p {
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: grid;
+    gap: 25px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--clr-accent);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.07);
     border: 1px solid var(--glass-border);
-    padding: clamp(30px, 5vw, 50px);
-    border-radius: 32px;
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    animation: modalSlideUp 0.4s ease;
+    border-radius: 12px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.1rem;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes modalSlideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--clr-accent);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
 }
 
-.modal__close {
-    position: absolute;
-    top: 20px; right: 25px;
-    font-size: 2rem;
-    cursor: pointer;
+.contact-form .btn--primary {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.contact-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.contact-footer p {
+    font-size: 0.85rem;
     color: #94a3b8;
-    transition: 0.3s;
 }
-.modal__close:hover { color: var(--clr-accent); }
+
+@media (max-width: 600px) {
+    .modal__content--contact {
+        padding: 40px 25px;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
 
 /* Form Styles */
 .contact-form .form-group { margin-bottom: 20px; text-align: left; }

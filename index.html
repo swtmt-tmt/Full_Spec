@@ -249,22 +249,16 @@
             <p>&copy; 2024 Future Tech Summit. Built for your Portfolio.</p>
         </div>
     </footer>
+    
 <div class="modal" id="contact-modal">
-    <div class="modal__content">
-        <span class="modal__close">&times;</span>
-        <h2>Contact</h2>
-        <form>
-            <input type="text" placeholder="お名前">
-            <input type="email" placeholder="メールアドレス">
-            <textarea placeholder="お問い合わせ内容"></textarea>
-            <button type="submit" class="btn btn--primary">送信する</button>
-        </form>
-    </div>
-</div>
-<div class="modal" id="contact-modal">
-    <div class="modal__content">
+    <div class="modal__content modal__content--wide">
         <span class="modal__close" id="close-contact">&times;</span>
-        <h2 class="section-title" style="margin-bottom:30px">Contact<span>お問い合わせ</span></h2>
+        <h2 class="section-title" style="margin-bottom:20px">Contact<span>お問い合わせ</span></h2>
+        
+        <div class="contact-info" style="text-align: center; margin-bottom: 30px;">
+            <p>イベントに関するご質問・ご要望は、<br>以下のフォームよりお気軽にお送りください。</p>
+        </div>
+
         <form class="contact-form">
             <div class="form-group">
                 <label>お名前</label>
@@ -275,13 +269,18 @@
                 <input type="email" placeholder="example@techsummit.com" required>
             </div>
             <div class="form-group">
-                <label>内容</label>
-                <textarea placeholder="ご質問やメッセージをご記入ください" rows="5" required></textarea>
+                <label>お問い合わせ内容</label>
+                <textarea placeholder="ご自由に記入してください" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn--primary" style="width:100%">メッセージを送信する</button>
         </form>
+        
+        <div class="contact-footer" style="text-align: center; font-size: 0.8rem; color: #94a3b8; margin-top: 25px;">
+            <p>通常2営業日以内に担当者より返信いたします。</p>
+        </div>
     </div>
 </div>
+
 <div class="modal" id="access-modal">
     <div class="modal__content modal__content--map">
         <span class="modal__close" id="close-access">&times;</span>
@@ -310,56 +309,38 @@
 </html>
 
 <script>
-    const modal = document.getElementById('contact-modal');
-    const openBtn = document.getElementById('open-contact');
-    const closeBtn = document.getElementById('close-contact');
+    // 要素の取得
+    const contactModal = document.getElementById('contact-modal');
+    const accessModal = document.getElementById('access-modal');
+    const openContactBtn = document.getElementById('open-contact');
+    const openAccessBtn = document.getElementById('open-access');
+    const closeContactBtn = document.getElementById('close-contact');
+    const closeAccessBtn = document.getElementById('close-access');
 
-    // 開く
-    openBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // 背後のスクロールを止める
+    // お問い合わせを開く
+    openContactBtn.addEventListener('click', () => {
+        contactModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     });
 
-    // 閉じる（×ボタン）
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // スクロール再開
+    // 会場アクセスを開く
+    openAccessBtn.addEventListener('click', () => {
+        accessModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     });
 
-    // 閉じる（背景クリック）
+    // 閉じる処理（共通）
+    const closeModal = (targetModal) => {
+        targetModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    };
+
+    closeContactBtn.addEventListener('click', () => closeModal(contactModal));
+    closeAccessBtn.addEventListener('click', () => closeModal(accessModal));
+
+    // 背景クリックで閉じる
     window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+        if (e.target === contactModal) closeModal(contactModal);
+        if (e.target === accessModal) closeModal(accessModal);
     });
-    // 既存の変数宣言の下に追加
-const accessModal = document.getElementById('access-modal');
-const openAccessBtn = document.getElementById('open-access');
-const closeAccessBtn = document.getElementById('close-access');
-
-// Accessを開く
-openAccessBtn.addEventListener('click', () => {
-    accessModal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-});
-
-// Accessを閉じる（×ボタン）
-closeAccessBtn.addEventListener('click', () => {
-    accessModal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-});
-
-// 背景クリックで閉じる（既存のwindow.addEventListener内に統合）
-window.addEventListener('click', (e) => {
-    if (e.target === accessModal) {
-        accessModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-    // お問い合わせモーダルの処理もそのまま残す
-    if (e.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-});
 </script>
