@@ -316,31 +316,37 @@
 </html>
 
 <script>
+    // モーダル要素
     const contactModal = document.getElementById('contact-modal');
     const accessModal = document.getElementById('access-modal');
-    const openContactBtn = document.getElementById('open-contact');
-    const openAccessBtn = document.getElementById('open-access');
+
+    // 閉じるボタン
     const closeContactBtn = document.getElementById('close-contact');
     const closeAccessBtn = document.getElementById('close-access');
 
-    // お問い合わせを開く
-    openContactBtn.addEventListener('click', () => {
-        contactModal.style.display = 'flex';
+    // 開く処理の共通関数
+    const openModal = (target) => {
+        target.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-    });
+    };
 
-    // 会場アクセスを開く
-    openAccessBtn.addEventListener('click', () => {
-        accessModal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    });
-
-    // 閉じる処理（共通）
-    const closeModal = (targetModal) => {
-        targetModal.style.display = 'none';
+    // 閉じる処理の共通関数
+    const closeModal = (target) => {
+        target.style.display = 'none';
         document.body.style.overflow = 'auto';
     };
 
+    // --- お問い合わせボタンの紐付け (Navのクラス または FooterのID) ---
+    document.querySelectorAll('.nav-open-contact, #open-contact').forEach(btn => {
+        btn.addEventListener('click', () => openModal(contactModal));
+    });
+
+    // --- 会場アクセスボタンの紐付け (Navのクラス または FooterのID) ---
+    document.querySelectorAll('.nav-open-access, #open-access').forEach(btn => {
+        btn.addEventListener('click', () => openModal(accessModal));
+    });
+
+    // 閉じるイベント
     closeContactBtn.addEventListener('click', () => closeModal(contactModal));
     closeAccessBtn.addEventListener('click', () => closeModal(accessModal));
 
@@ -348,5 +354,12 @@
     window.addEventListener('click', (e) => {
         if (e.target === contactModal) closeModal(contactModal);
         if (e.target === accessModal) closeModal(accessModal);
+    });
+
+    // ハンバーガーメニューで項目クリック時にメニューを閉じる（スマホ用）
+    document.querySelectorAll('.nav-links a, .nav-links span').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('nav-check').checked = false;
+        });
     });
 </script>

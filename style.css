@@ -96,13 +96,25 @@ h1, h2, h3, .logo, .btn, .time, .price-val, .footer__nav-group h4 {
 .logo { font-size: 1.6rem; font-weight: 900; }
 .logo span { color: var(--clr-accent); }
 
-.nav-links { display: flex; list-style: none; gap: 20px; align-items: center;}
-.nav-links a { color: #fff; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
-.nav-links a:hover { color: var(--clr-accent); }
-.nav-btn { background: var(--clr-orange); padding: 10px 24px; border-radius: 8px; }
+.nav-links {
+    gap: clamp(15px, 2vw, 25px); /* 画面幅に合わせて間隔を自動調整 */
+}
 
-#nav-check { display: none; }
-.hamburger { display: none; cursor: pointer; padding: 10px; z-index: 2100; }
+/* ナビ内のリンク（Access, Contactなど）にカーソルを合わせると指マークにする */
+.nav-links a, 
+.nav-open-access, 
+.nav-open-contact {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* スマホメニュー展開時の微調整 */
+@media (max-width: 900px) {
+    .nav-links {
+        padding-top: 60px; /* 上部に少し余裕を持たせる */
+    }
+}
 
 @media (max-width: 900px) {
     .hamburger { display: block; }
