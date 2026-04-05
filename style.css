@@ -96,7 +96,7 @@ h1, h2, h3, .logo, .btn, .time, .price-val, .footer__nav-group h4 {
 .logo { font-size: 1.6rem; font-weight: 900; }
 .logo span { color: var(--clr-accent); }
 
-.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-links { display: flex; list-style: none; gap: 20px; align-items: center;}
 .nav-links a { color: #fff; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
 .nav-links a:hover { color: var(--clr-accent); }
 .nav-btn { background: var(--clr-orange); padding: 10px 24px; border-radius: 8px; }
