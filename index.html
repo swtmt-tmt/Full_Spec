@@ -333,4 +333,33 @@
             document.body.style.overflow = 'auto';
         }
     });
+    // 既存の変数宣言の下に追加
+const accessModal = document.getElementById('access-modal');
+const openAccessBtn = document.getElementById('open-access');
+const closeAccessBtn = document.getElementById('close-access');
+
+// Accessを開く
+openAccessBtn.addEventListener('click', () => {
+    accessModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+});
+
+// Accessを閉じる（×ボタン）
+closeAccessBtn.addEventListener('click', () => {
+    accessModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+// 背景クリックで閉じる（既存のwindow.addEventListener内に統合）
+window.addEventListener('click', (e) => {
+    if (e.target === accessModal) {
+        accessModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    // お問い合わせモーダルの処理もそのまま残す
+    if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
 </script>
