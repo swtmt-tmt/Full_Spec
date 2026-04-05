@@ -251,7 +251,7 @@ h1, h2, h3, .logo, .btn, .time, .price-val, .footer__nav-group h4 {
 .price-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 24px; padding: 40px; text-align: center; position: relative; }
 .price-card--featured { border-color: var(--clr-purple); background: rgba(112,0,255,0.06); transform: scale(1.02); }
 .featured-label { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--clr-purple); font-size: 0.75rem; font-weight: 900; padding: 6px 20px; border-radius: 100px; }
-.price-val { font-size: 3.5rem; font-weight: 900; margin: 20px 0; }
+.price-val { font-size: 3rem; font-weight: 900; margin: 20px 0; }
 .price-list { list-style: none; margin-bottom: 30px; text-align: left; font-size: 0.9rem; color: #94a3b8; }
 .price-list li { margin-bottom: 10px; }
 
