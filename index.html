@@ -232,7 +232,7 @@
                     <h4>Support</h4>
                     <ul>
                         <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="javascript:void(0)" id="open-contact">お問い合わせ</a></li>
                         <li><a href="#">会場アクセス</a></li>
                     </ul>
                 </div>
@@ -249,6 +249,64 @@
             <p>&copy; 2024 Future Tech Summit. Built for your Portfolio.</p>
         </div>
     </footer>
-
+<div class="modal" id="contact-modal">
+    <div class="modal__content">
+        <span class="modal__close">&times;</span>
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="お名前">
+            <input type="email" placeholder="メールアドレス">
+            <textarea placeholder="お問い合わせ内容"></textarea>
+            <button type="submit" class="btn btn--primary">送信する</button>
+        </form>
+    </div>
+</div>
+<div class="modal" id="contact-modal">
+    <div class="modal__content">
+        <span class="modal__close" id="close-contact">&times;</span>
+        <h2 class="section-title" style="margin-bottom:30px">Contact<span>お問い合わせ</span></h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label>お名前</label>
+                <input type="text" placeholder="Tech Taro" required>
+            </div>
+            <div class="form-group">
+                <label>メールアドレス</label>
+                <input type="email" placeholder="example@techsummit.com" required>
+            </div>
+            <div class="form-group">
+                <label>内容</label>
+                <textarea placeholder="ご質問やメッセージをご記入ください" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width:100%">メッセージを送信する</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
+
+<script>
+    const modal = document.getElementById('contact-modal');
+    const openBtn = document.getElementById('open-contact');
+    const closeBtn = document.getElementById('close-contact');
+
+    // 開く
+    openBtn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // 背後のスクロールを止める
+    });
+
+    // 閉じる（×ボタン）
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // スクロール再開
+    });
+
+    // 閉じる（背景クリック）
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
