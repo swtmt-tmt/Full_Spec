@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Tech Summit 2024 | Full Spec</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-visuals">
+        <div class="bg-glow bg-glow--1"></div>
+        <div class="bg-glow bg-glow--2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container navbar__inner">
+            <div class="logo">FUTURE<span>TECH</span></div>
+            
+            <input type="checkbox" id="nav-check">
+            <label for="nav-check" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+            
+<ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#tickets">Tickets</a></li>
+    <li><span class="nav-link nav-open-access">Access</span></li>
+    <li><span class="nav-link nav-open-contact">Contact</span></li>
+    <li class="nav-btn-wrapper"><a href="#tickets" class="nav-btn">Entry</a></li>
+</ul>
+        </div>
+    </nav>
+
+<main class="container">
+    <div class="ticket-page">
+    <section class="ticket-intro">
+        <p>「FUTURE TECH SUMMIT 2026」の入場チケットです。会場でのリアルな体験と、後日の復習に最適なアーカイブ視聴がセットになっています。</p>
+    </section>
+
+    <div class="ticket-grid">
+        <div class="ticket-card featured">
+            <span class="badge">RECOMMEND</span>
+            <h2 class="plan-name">Full Access</h2>
+            <div class="price">¥ 15,000<span>(税込)</span></div>
+            <ul class="features">
+                <li><strong>会場参加 + アーカイブ視聴権</strong></li>
+                <li><strong>アフターパーティ参加権</strong></li>
+                <li><strong>限定ノベルティセット</strong></li>
+                <li>優先入場レーン利用</li>
+            </ul>
+            <p class="plan-desc">登壇者と直接交流できるパーティ参加権が付いた、最もプレミアムなプランです。</p>
+        </div>
+
+    </div>
+
+    <section class="purchase-info">
+        <h3>ご購入にあたって</h3>
+        <p>チケットの決済完了後、登録メールアドレスにQRコードが届きます。当日は受付にてご提示ください。</p>
+    </section>
+</div>
+</main>
+
+<footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <div class="logo">FUTURE<span>TECH</span></div>
+                <p>次世代の技術と知見が交差する、エンジニアのためのカンファレンス。</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="X (Twitter)">𝕏</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="YouTube">YouTube</a>
+                    <a href="#" aria-label="GitHub">GitHub</a>
+                </div>
+            </div>
+
+            <div class="footer__nav">
+                <div class="footer__nav-group">
+                    <h4>Event</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-group">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="javascript:void(0)" id="open-contact">お問い合わせ</a></li>
+                        <li><a href="javascript:void(0)" id="open-access">会場アクセス</a></li>
+                    </ul>
+                </div>
+                <div class="footer__nav-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">特定商取引法に基づく表記</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024 Future Tech Summit. Built for your Portfolio.</p>
+        </div>
+    </footer>
+
+<div class="modal" id="contact-modal">
+    <div class="modal__content modal__content--wide">
+        <span class="modal__close" id="close-contact">&times;</span>
+        <h2 class="section-title">Contact<span>お問い合わせ</span></h2>
+        
+        <div class="modal-info">
+            <p>イベントに関するご質問は、以下のフォームよりお気軽にお送りください。</p>
+        </div>
+
+        <form class="contact-form">
+            <div class="form-group">
+                <label>お名前</label>
+                <input type="text" placeholder="Tech Taro" required>
+            </div>
+            <div class="form-group">
+                <label>メールアドレス</label>
+                <input type="email" placeholder="example@techsummit.com" required>
+            </div>
+            <div class="form-group">
+                <label>内容</label>
+                <textarea placeholder="ご記入ください" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">メッセージを送信する</button>
+        </form>
+        
+        <div class="modal-footer">
+            <p>通常2営業日以内に返信いたします。</p>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="access-modal">
+    <div class="modal__content modal__content--wide">
+        <span class="modal__close" id="close-access">&times;</span>
+        <h2 class="section-title">Access<span>会場アクセス</span></h2>
+        
+        <div class="modal-info">
+            <p><strong>東京ドーム</strong></p>
+            <p>〒112-0004 東京都文京区後楽1-3-61</p>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.063260840254!2d139.751307!3d35.70564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c16baee33f3%3A0x5058b292b24d640e!2z5p2x5Lqs44OJ44O844Og!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+        
+        <div class="access-routes">
+            <div class="route-item">
+                <h4>JR Line</h4>
+                <p>「水道橋駅」西口より徒歩2分</p>
+            </div>
+            <div class="route-item">
+                <h4>Subway</h4>
+                <p>「水道橋駅」A2出口より徒歩1分</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+    // モーダル要素
+    const contactModal = document.getElementById('contact-modal');
+    const accessModal = document.getElementById('access-modal');
+
+    // 閉じるボタン
+    const closeContactBtn = document.getElementById('close-contact');
+    const closeAccessBtn = document.getElementById('close-access');
+
+    // 開く処理の共通関数
+    const openModal = (target) => {
+        target.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    };
+
+    // 閉じる処理の共通関数
+    const closeModal = (target) => {
+        target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    };
+
+    // --- お問い合わせボタンの紐付け (Navのクラス または FooterのID) ---
+    document.querySelectorAll('.nav-open-contact, #open-contact').forEach(btn => {
+        btn.addEventListener('click', () => openModal(contactModal));
+    });
+
+    // --- 会場アクセスボタンの紐付け (Navのクラス または FooterのID) ---
+    document.querySelectorAll('.nav-open-access, #open-access').forEach(btn => {
+        btn.addEventListener('click', () => openModal(accessModal));
+    });
+
+    // 閉じるイベント
+    closeContactBtn.addEventListener('click', () => closeModal(contactModal));
+    closeAccessBtn.addEventListener('click', () => closeModal(accessModal));
+
+    // 背景クリックで閉じる
+    window.addEventListener('click', (e) => {
+        if (e.target === contactModal) closeModal(contactModal);
+        if (e.target === accessModal) closeModal(accessModal);
+    });
+
+    // ハンバーガーメニューで項目クリック時にメニューを閉じる（スマホ用）
+    document.querySelectorAll('.nav-links a, .nav-links span').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('nav-check').checked = false;
+        });
+    });
+</script>
